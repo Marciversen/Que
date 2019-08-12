@@ -34,27 +34,27 @@ DELIMITER $$
 -- For external databases: Edit localhost to match arma3server IP
 --
 
-CREATE DEFINER=`db68692`@`195.201.69.162` PROCEDURE `resetLifeVehicles`()
+CREATE DEFINER=`db68692`@`158.69.120.198` PROCEDURE `resetLifeVehicles`()
 BEGIN
   UPDATE `vehicles` SET `active`= 0;
 END$$
 
-CREATE DEFINER=`db68692`@`195.201.69.162` PROCEDURE `deleteDeadVehicles`()
+CREATE DEFINER=`db68692`@`158.69.120.198` PROCEDURE `deleteDeadVehicles`()
 BEGIN
   DELETE FROM `vehicles` WHERE `alive` = 0;
 END$$
 
-CREATE DEFINER=`db68692`@`195.201.69.162` PROCEDURE `deleteOldHouses`()
+CREATE DEFINER=`db68692`@`158.69.120.198` PROCEDURE `deleteOldHouses`()
 BEGIN
   DELETE FROM `houses` WHERE `owned` = 0;
 END$$
 
-CREATE DEFINER=`db68692`@`195.201.69.162` PROCEDURE `deleteOldGangs`()
+CREATE DEFINER=`db68692`@`158.69.120.198` PROCEDURE `deleteOldGangs`()
 BEGIN
   DELETE FROM `gangs` WHERE `active` = 0;
 END$$
 
-CREATE DEFINER=`db68692`@`195.201.69.162` PROCEDURE `deleteOldContainers`()
+CREATE DEFINER=`db68692`@`158.69.120.198` PROCEDURE `deleteOldContainers`()
 BEGIN
   DELETE FROM `containers` WHERE `owned` = 0;
 END$$
@@ -207,15 +207,3 @@ CREATE TABLE IF NOT EXISTS `wanted` (
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
